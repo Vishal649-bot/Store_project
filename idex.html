@@ -208,31 +208,31 @@
         }
       }
 
-      function deleteItem(listId) {
-        let ele = document.getElementById(listId);
-        console.log(ele);
-        ele.innerHTML = " ";
-        localStorage.removeItem(listId);
-      }
+      // function deleteItem(listId) {
+      //   let ele = document.getElementById(listId);
+      //   console.log(ele);
+      //   ele.innerHTML = " ";
+      //   localStorage.removeItem(listId);
+      // }
 
-      function edit(itemId) {
-        axios
-          .get(
-            `https://crudcrud.com/api/5543ac79f5e14a8ab9813de57b7bec2a/appointmentData/${itemId}`
-          )
-          .then((res) => {
-            const storedData = res.data;
-            document.querySelector('input[name="Itemname"]').value =
-              storedData.Iname;
-            document.querySelector('input[name="description"]').value =
-              storedData.Description;
-            document.querySelector('select[name="price"]').value =
-              storedData.price;
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      }
+      // function edit(itemId) {
+      //   axios
+      //     .get(
+      //       `https://crudcrud.com/api/5543ac79f5e14a8ab9813de57b7bec2a/appointmentData/${itemId}`
+      //     )
+      //     .then((res) => {
+      //       const storedData = res.data;
+      //       document.querySelector('input[name="Itemname"]').value =
+      //         storedData.Iname;
+      //       document.querySelector('input[name="description"]').value =
+      //         storedData.Description;
+      //       document.querySelector('select[name="price"]').value =
+      //         storedData.price;
+      //     })
+      //     .catch((error) => {
+      //       console.log(error);
+      //     });
+      // }
     </script>
   </body>
 </html>
